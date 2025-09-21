@@ -26,35 +26,27 @@ PRICE_COFFEE = 2
 PRICE_CROISSANT = 5
 PRICE_JUICE = 3
 
-# Def function ask_client
-
-def ask_client(item_name, item_price, current_bill):
-    order = input("Would you like a " + item_name + "? (y for yes, n for no)")
-    
-    if order == "y":
-        item_number = input("How many would you like? (input number)")
-        current_bill = current_bill + int(item_number)*item_price        
-    elif order == "n":
-        current_bill = current_bill
-    else:
-        print("The input is not valid!")
-
-    return order, current_bill
-
-order_coffee, bill = ask_client("coffee", PRICE_COFFEE, bill)
-order_croissant, bill = ask_client("croissant", PRICE_CROISSANT, bill)
-order_juice, bill = ask_client("juice", PRICE_JUICE, bill)
-
 # Write a function ask_number_items(item_name)
 # - The function asks the user to input a number of items of type item_name
 # - The function returns an integer with the number of items
 
-def ask_number_items(item_name):
+def ask_number_items(item_name,current_bill):
     items = input("How many " + item_name + " would you like?")
     print ("You are ordering " + items + " " + item_name)
+    
+    if items == "0":
+        current_bill = current_bill + int(item_number)*item_price
+    elif items == "0":
+        current_bill = current_bill
+    else:
+        print("The input is not valid!")
+    
+    return current_bill
 
-order_coffee, item = ask_number_items("coffee")
 
+number_coffee, bill = ask_number_items("coffee", bill)
+number_croissant, bill = ask_number_items("croissant", bill)
+numberr_juice, bill = ask_number_items("juice", bill)
 
 # Summarise the order
 # Function str transform a number into a text so we can add (+) elements of the same type 
