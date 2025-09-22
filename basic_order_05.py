@@ -30,7 +30,7 @@ PRICE_JUICE = 3
 def ask_number_items(item_name, item_price, current_bill):
     items = input("How many " + item_name + " would you like?")
     
-    if items == "2":
+    if items != "0":
         print ("You are ordering " + items + " " + item_name)
         current_bill = current_bill + int(items)*item_price
 
@@ -41,11 +41,11 @@ def ask_number_items(item_name, item_price, current_bill):
     else:
         print("The input is not valid!")
 
-    return current_bill
+    return items, current_bill
 
-number_coffee = ask_number_items("coffee", PRICE_COFFEE, bill)
-number_croissant = ask_number_items("croissant", PRICE_CROISSANT, bill)
-number_juice = ask_number_items("juice", PRICE_JUICE, bill)
+number_coffee, bill = ask_number_items("coffee", PRICE_COFFEE, bill)
+number_croissant, bill = ask_number_items("croissant", PRICE_CROISSANT, bill)
+number_juice, bill = ask_number_items("juice", PRICE_JUICE, bill)
 
 
 print ("The bill is " + str(bill) + " euros.")
