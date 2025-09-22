@@ -26,9 +26,6 @@ PRICE_COFFEE = 2
 PRICE_CROISSANT = 5
 PRICE_JUICE = 3
 
-# Write a function ask_number_items(item_name)
-# - The function asks the user to input a number of items of type item_name
-# - The function returns an integer with the number of items
 
 def ask_number_items(item_name, item_price, current_bill):
     items = input("How many " + item_name + " would you like?")
