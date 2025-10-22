@@ -1,4 +1,4 @@
-# Version 07
+# Version 07 aims to define a function to take the order not for a single person but for all the people in a table
 
 # Write a function ask_number_items(item_name)
 # - The function asks the user to input a number of items of type item_name

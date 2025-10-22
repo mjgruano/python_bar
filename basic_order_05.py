@@ -1,5 +1,9 @@
 # Version 05 aims to define a function for a group of clients ordering several items at the same time
 
+# Write a function ask_number_items(item_name)
+# - The function asks the user to input a number of items of type item_name
+# - The function returns an integer with the number of items
+
 # Modify the program so in the final bill it includes a line that says
 # "Party of X people" 
 # "Average cost per customer EUR Y"
