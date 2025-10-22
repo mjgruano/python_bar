@@ -1,8 +1,6 @@
 # Version 06 
 
-# Write a function ask_number_items(item_name)
-# - The function asks the user to input a number of items of type item_name
-# - The function returns an integer with the number of items
+# Define new functions to calculate the total cost of an order
 
 
 
