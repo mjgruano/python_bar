@@ -5,13 +5,6 @@
 # "Average cost per customer EUR Y"
 # Where X is the number of people sitting in the table and Y is the average spend per customer
 
-# Write a function ask_number_items(item_name)
-# - The function asks the user to input a number of items of type item_name
-# - The function returns an integer with the number of items
-
-# Change the function ask_client so it uses ask_number_items inside
-
-# Debug the program to see how the flow goes over the functions
 
 
 print("Hello to the Python bar!")

@@ -1,10 +1,12 @@
-# Version 05 aims to define a function for a group of clients ordering several items at the same time
+# Version 07
 
-# Modify the program so in the final bill it includes a line that says
-# "Party of X people" 
-# "Average cost per customer EUR Y"
-# Where X is the number of people sitting in the table and Y is the average spend per customer
+# Write a function ask_number_items(item_name)
+# - The function asks the user to input a number of items of type item_name
+# - The function returns an integer with the number of items
 
+# Change the function ask_client so it uses ask_number_items inside
+
+# Debug the program to see how the flow goes over the functions
 
 PRICE_COFFEE = 2
 PRICE_CROISSANT = 5
