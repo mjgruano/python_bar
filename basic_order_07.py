@@ -39,8 +39,9 @@ def ask_client(item_name, item_price, current_bill):
     
     if order == "y":
         number_items = ask_number_items(item_name)
-        current_bill = current_bill + item_price
+        current_bill = current_bill + item_price*int(number_items)
     elif order == "n":
+        number_items = 0
         current_bill = current_bill
     else:
         print("The input is not valid!")
@@ -56,22 +57,22 @@ if order_coffee == "y" and order_croissant == "y" and order_juice == "y" :
     print("You've ordered",str(number_coffee), "coffee",str(number_croissant), "croissant", "and ", str(number_juice), "juice")
   
 elif order_coffee == "y" and order_croissant == "y" and order_juice == "n" :
-    print("You've ordered a coffee and a croissant!")
+    print("You've ordered",str(number_coffee), "coffee","and ", str(number_croissant), "croissant")
 
 elif order_coffee == "y" and order_croissant == "n" and order_juice == "y":
-    print("You've ordered a coffee and a juice!")
+    print("You've ordered",str(number_coffee), "coffee", "and ", str(number_juice), "juice")
 
 elif order_coffee == "n" and order_croissant == "y" and order_juice == "y":
-    print("You've ordered a croissant and a juice!")
+    print("You've ordered",str(number_croissant), "croissant", "and ", str(number_juice), "juice")
 
 elif order_coffee == "y" and order_croissant == "n" and order_juice == "n":
-    print("You've ordered", str(number_items), "coffee")
+    print("You've ordered", str(number_coffee), "coffee")
 
 elif order_coffee == "n" and order_croissant == "y" and order_juice == "n":
-    print("You've ordered a croissant!")
+    print("You've ordered",str(number_croissant), "croissants")
 
 elif order_coffee == "n" and order_croissant == "n" and order_juice == "y":
-    print("You've ordered a juice!")
+    print("You've ordered",str(number_juice), "juices")
 
 else:
     print("You didn't order anything today!")
