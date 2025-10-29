@@ -32,14 +32,14 @@ print("You've ordered ",order_coffee, " coffee",order_croissant, " croissant", "
 """
 def ask_number_items(item_name):
     items = input("How many " + item_name + " would you like to have?")
-    return items
+    return int(items)
 
 def ask_client(item_name, item_price, current_bill):
     order = input("Would you like a " + item_name + "? (y for yes, n for no)")
     
     if order == "y":
         number_items = ask_number_items(item_name)
-        current_bill = current_bill + item_price*int(number_items)
+        current_bill = current_bill + item_price*(number_items)
     elif order == "n":
         number_items = 0
         current_bill = current_bill
