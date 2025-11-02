@@ -1,13 +1,10 @@
-# Version 07 aims to define a function to take the order not for a single person but for all the people in a table
+# Version 08 aims to define a function to take the order not for a single person but for all the people in a table
 # We can choose the number of items (not only1 as in version 04)
 
-# Write a function ask_number_items(item_name)
+# Write a function print_bill_item(item_name)
 # - The function asks the user to input a number of items of type item_name
 # - The function returns an integer with the number of items
 
-# Change the function ask_client so it uses ask_number_items inside
-
-# Debug the program to see how the flow goes over the functions
 
 print("Hello to the Python bar!")
 
@@ -19,17 +16,7 @@ PRICE_COFFEE = 2
 PRICE_CROISSANT = 5
 PRICE_JUICE = 3
 
-"""
-def ask_number_items(item_name):
-    items = input("How many " + item_name + " would you like to have?")
-    return items
 
-order_coffee = ask_number_items("coffee")
-order_croissant = ask_number_items("croissant")
-order_juice = ask_number_items("juice")
-
-print("You've ordered ",order_coffee, " coffee",order_croissant, " croissant", " and",order_juice, "juice")
-"""
 def ask_number_items(item_name):
     items = input("How many " + item_name + " would you like to have?")
     return int(items)
@@ -52,7 +39,19 @@ number_coffee, order_coffee, bill = ask_client("coffee", PRICE_COFFEE, bill)
 number_croissant, order_croissant, bill = ask_client("croissant", PRICE_CROISSANT, bill)
 number_juice, order_juice, bill = ask_client("juice", PRICE_JUICE, bill)
 
+def print_bill_item (item_name, item_units, item_cost):
+    if item_units == 0:
+        pass
+    else:
+        """print (item_name + "_______", + item_units," units", "______", item_cost, " euros")"""
+        print (f"{item_name:<20} {item_units:>10} units {item_cost:>10} euros")
 
+
+print_bill_item ("coffee", number_coffee, + number_coffee * PRICE_COFFEE)
+print_bill_item ("croissant", number_croissant, + number_croissant * PRICE_CROISSANT)
+print_bill_item ("juice", number_juice, number_juice * PRICE_JUICE)
+
+"""
 if order_coffee == "y" and order_croissant == "y" and order_juice == "y" :
     print("You've ordered",str(number_coffee), "coffee",str(number_croissant), "croissant", "and ", str(number_juice), "juice")
   
@@ -80,3 +79,5 @@ else:
 
 print ("The bill is " + str(bill) + " euros.")
 print ("Thanks!")
+
+"""
