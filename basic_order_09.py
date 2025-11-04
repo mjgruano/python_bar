@@ -50,4 +50,5 @@ print_bill_item ("croissant", number_croissant, + number_croissant * PRICE_CROIS
 print_bill_item ("juice", number_juice, number_juice * PRICE_JUICE)
 
 def print_bill_customer ():
-    
+
+def print_line ():
