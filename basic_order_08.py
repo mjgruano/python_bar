@@ -1,9 +1,6 @@
-# Version 08 aims to define a function to take the order not for a single person but for all the people in a table
-# We can choose the number of items (not only1 as in version 04)
+# Version 08 aims to define a function to print the bill with the items and cost without the conditional rules
 
-# Write a function print_bill_item(item_name)
-# - The function asks the user to input a number of items of type item_name
-# - The function returns an integer with the number of items
+# Write a function print_bill_item(item_name) and call it
 
 
 print("Hello to the Python bar!")
