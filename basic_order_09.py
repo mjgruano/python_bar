@@ -5,6 +5,8 @@
 
 print("Hello to the Python bar!")
 
+clients = input("How many people in your party? ")
+
 # Configuration Variables
 
 bill = 0
@@ -44,11 +46,22 @@ def print_bill_item (item_name, item_units, item_cost):
         """print (item_name + "_______", + item_units," units", "______", item_cost, " euros")"""
         print (f"{item_name:<20} {item_units:>10} units {item_cost:>10} euros")
 
+def printline(num,sym):
+    for i in range(num):
+        a = (num*sym)
+    return a
+a = printline(40,'_')
+    
+def print_bill_customer ():
+    print (f"Total cost is {bill:>40} euros")
+    print ("The average cost per customer is ", round(bill/int(clients), 2), "euros")
+
 
 print_bill_item ("coffee", number_coffee, + number_coffee * PRICE_COFFEE)
 print_bill_item ("croissant", number_croissant, + number_croissant * PRICE_CROISSANT)
 print_bill_item ("juice", number_juice, number_juice * PRICE_JUICE)
+print (a)
+print_bill_customer ()
 
-def print_bill_customer ():
 
-def print_line ():
+
