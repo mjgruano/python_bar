@@ -2,20 +2,18 @@
 
 # Write a function print_bill_customer() and call it to show the cost per customer
 
-
-print("Hello to the Python bar!")
-
-clients = input("How many people in your party? ")
-
 # Configuration Variables
-
-bill = 0
 
 PRICE_COFFEE = 2
 PRICE_CROISSANT = 5
 PRICE_JUICE = 3
 
 # Configuration Functions
+
+def ask_number_client ():
+    print ("Hello to the Python bar!")
+    clients = input("How many people in your party?")
+    return clients
 
 def ask_number_items(item_name):
     items = input("How many " + item_name + " would you like to have?")
@@ -35,10 +33,6 @@ def ask_client(item_name, item_price, current_bill):
 
     return number_items, order, current_bill
 
-number_coffee, order_coffee, bill = ask_client("coffee", PRICE_COFFEE, bill)
-number_croissant, order_croissant, bill = ask_client("croissant", PRICE_CROISSANT, bill)
-number_juice, order_juice, bill = ask_client("juice", PRICE_JUICE, bill)
-
 def print_bill_item (item_name, item_units, item_cost):
     if item_units == 0:
         pass
@@ -48,19 +42,28 @@ def print_bill_item (item_name, item_units, item_cost):
 
 def printline(num,sym):
     for i in range(num):
-        a = (num*sym)
-    return a
-a = printline(40,'_')
+        bill_line = (num*sym)
+    return bill_line
     
 def print_bill_customer ():
-    print (f"Total cost is {bill:>40} euros")
-    print ("The average cost per customer is ", round(bill/int(clients), 2), "euros")
+    print (f"Total cost is {bill:>34} euros")
+    print ("The average cost per customer is ", round(bill/int(number_clients), 2), "euros")
 
+# Program body
+
+bill = 0
+
+number_clients = ask_number_client()
+number_coffee, order_coffee, bill = ask_client("coffee", PRICE_COFFEE, bill)
+number_croissant, order_croissant, bill = ask_client("croissant", PRICE_CROISSANT, bill)
+number_juice, order_juice, bill = ask_client("juice", PRICE_JUICE, bill)
 
 print_bill_item ("coffee", number_coffee, + number_coffee * PRICE_COFFEE)
 print_bill_item ("croissant", number_croissant, + number_croissant * PRICE_CROISSANT)
 print_bill_item ("juice", number_juice, number_juice * PRICE_JUICE)
-print (a)
+
+print_bill_line = printline(54,'_')
+print (print_bill_line)
 print_bill_customer ()
 
 
