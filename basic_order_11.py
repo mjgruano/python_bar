@@ -1,16 +1,12 @@
-# Version 10 aims to make available items generic 
+# Version 11 aims to include dictionaries  
 
-# Configuration Variables
+# Configuration Dictionary
 
-PRICE_ITEM_1 = 3
-PRICE_ITEM_2 = 6
-PRICE_ITEM_3 = 2
-PRICE_ITEM_4 = 4
-
-ITEM_1 = "tea"
-ITEM_2 = "cake"
-ITEM_3 = "milk"
-ITEM_4 = "cookie"
+menu = { 
+    1: {"item": "juice" , "price": 3},
+    2: {"item": "chocolate" , "price": 4},
+    3: {"item": "water" , "price": 1}
+}
 
 # Configuration Functions
 
@@ -58,15 +54,14 @@ bill = 0
 
 number_clients = ask_number_client()
 
-number_item_1, order_item_1, bill = ask_client(ITEM_1, PRICE_ITEM_1, bill)
-number_item_2, order_item_2, bill = ask_client(ITEM_2, PRICE_ITEM_2, bill)
-number_item_3, order_item_3, bill = ask_client(ITEM_3, PRICE_ITEM_3, bill)
-number_item_4, order_item_4, bill = ask_client(ITEM_4, PRICE_ITEM_4, bill)
+order = []
 
-print_bill_item (ITEM_1, number_item_2, + number_item_2 * PRICE_ITEM_1)
-print_bill_item (ITEM_2, number_item_2, + number_item_2 * PRICE_ITEM_2)
-print_bill_item (ITEM_3, number_item_3, number_item_3 * PRICE_ITEM_3)
-print_bill_item (ITEM_4, number_item_4, number_item_4 * PRICE_ITEM_4)
+for item in menu:
+    number_item, order_item, bill = ask_client(menu[item]["item"], menu[item]["price"], bill)
+    order.append ((item, number_item))
+
+for item, number_item in order:
+    print_bill_item (menu[item]["item"], number_item, + number_item * menu[item]["price"])
 
 print_bill_line = printline(54,'_')
 print (print_bill_line)
