@@ -63,7 +63,7 @@ number_item_2, order_item_2, bill = ask_client(ITEM_2, PRICE_ITEM_2, bill)
 number_item_3, order_item_3, bill = ask_client(ITEM_3, PRICE_ITEM_3, bill)
 number_item_4, order_item_4, bill = ask_client(ITEM_4, PRICE_ITEM_4, bill)
 
-print_bill_item (ITEM_1, number_item_2, + number_item_2 * PRICE_ITEM_1)
+print_bill_item (ITEM_1, number_item_1, + number_item_1 * PRICE_ITEM_1)
 print_bill_item (ITEM_2, number_item_2, + number_item_2 * PRICE_ITEM_2)
 print_bill_item (ITEM_3, number_item_3, number_item_3 * PRICE_ITEM_3)
 print_bill_item (ITEM_4, number_item_4, number_item_4 * PRICE_ITEM_4)
