@@ -1,15 +1,20 @@
+# Step 1 - Add two numbers
 
-words = ["horse", "caw", "zebra", "duck", "bear"]
+expenses = [2.50, 3]
+total = 0
 
+total = total + 2.5 + 3
+print ("The expense list adds up to ", total)
 
+# Step 2 - Add all numbers using a loop
 
-def count_long_words(sample, min_length):
-    long_item = []
-    for item in sample:
-        lenght = len (item)
-        if lenght > min_length:
-            long_item.append(item)
-    return len(long_item)
+expenses = [2.50, 3, 5, 10]
 
-result = count_long_words(words, 2)
-print(result)
+def total_expenses(list):
+    total = 0
+    for num in list:
+        total = total + num
+    return total
+
+result = total_expenses(expenses)
+print ("The expense list adds up to ", result)
