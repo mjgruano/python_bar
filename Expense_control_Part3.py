@@ -1,5 +1,4 @@
-# Part 2 - Step 4 - Two expenses lists, no loop yet
-
+# Part 3 - Step 8 - Count expenses above a limit (single list)
 expenses1 = [2.50, 3, 5, 10]
 expenses2 = [15, 2, 1]
 
@@ -54,11 +53,3 @@ def calculate_all_totals(items):
 
 result = calculate_all_totals (all_expenses)
 print (result)
-
-# Part 3 - Step 8 - Count expenses above a limit (single list)
-
-def count_above_limit(expenses, limit):
-    expenses.count(limit)
-
-limit4 = count_above_limit([2.50, 3, 5, 10], 1)
-print(limit4)
