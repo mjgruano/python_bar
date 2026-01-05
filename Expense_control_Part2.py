@@ -58,7 +58,40 @@ print (result)
 # Part 3 - Step 8 - Count expenses above a limit (single list)
 
 def count_above_limit(expenses, limit):
-    expenses.count(limit)
+    n_above = 0
 
-limit4 = count_above_limit([2.50, 3, 5, 10], 1)
-print(limit4)
+    for number in expenses:
+        if number > limit:
+            n_above += 1
+
+    return n_above
+
+
+above4 = count_above_limit([2.50, 3, 5, 10], 4)
+print(above4)
+
+# Part 3 - Step 9 - Use the function on multiple lists
+
+for expense_list in all_expenses:
+    above4 = count_above_limit(expense_list, 4)
+    print(above4 ," expenses above the limit")
+
+# Part 3 - Step 10 - Combine totals and limits
+
+for expense_list in all_expenses:
+    total = total_spent(expense_list)
+    totals.append(total)
+    above4 = count_above_limit(expense_list, 4)
+    print("Total =" , total, " - " , " Above limit : ", above4)
+
+# Part 3 - Step 11 - Final Function (Main Goal)
+
+def analyze_expenses(all_expenses, limit):
+    total_limit = []
+
+    for expense_list in all_expenses:
+    total = total_spent(expense_list)
+    totals.append(total)
+    above4 = count_above_limit(expense_list, 4)
+  
+
