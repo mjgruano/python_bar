@@ -86,12 +86,16 @@ for expense_list in all_expenses:
 
 # Part 3 - Step 11 - Final Function (Main Goal)
 
+
 def analyze_expenses(all_expenses, limit):
-    total_limit = []
+    totals = []
 
     for expense_list in all_expenses:
-    total = total_spent(expense_list)
-    totals.append(total)
-    above4 = count_above_limit(expense_list, 4)
-  
+        total = total_spent(expense_list)
+        above4 = count_above_limit(expense_list, limit)
+        totals.append( (total, above4) )
 
+    return totals
+
+final_function = analyze_expenses(all_expenses, 4)
+print(final_function)
